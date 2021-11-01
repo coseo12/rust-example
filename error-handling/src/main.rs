@@ -1,8 +1,8 @@
 // use std::fs::File;
 // use std::io::ErrorKind;
 // use std::io::{self, Read};
-use std::fs;
-use std::io;
+// use std::fs;
+// use std::io;
 
 fn main() {
     //  panic!("crash and burn");
@@ -49,13 +49,16 @@ fn main() {
     // let f = File::open("hello.txt").expect("Filed to open hello.txt");
     // println!("{:?}",f);
 
-    let res = read_username_from_file();
-    println!("{:?}", res);
+    // let res = read_username_from_file();
+    // println!("{:?}", res);
 
+    use std::net::IpAddr;
+    let home: IpAddr = "127.0.0.1".parse().unwrap();
+        println!("{:?}", home);
 }
-fn read_username_from_file() -> Result<String, io::Error> {
-    fs::read_to_string("hello.txt")
-}
+// fn read_username_from_file() -> Result<String, io::Error> {
+//     fs::read_to_string("hello.txt")
+// }
 
 // fn read_username_from_file() -> Result<String, io::Error> {
 //     let mut s = String::new();
